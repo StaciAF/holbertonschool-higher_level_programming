@@ -13,10 +13,10 @@ else:
     lastdig = number % 10
 
 if lastdig > 5:
-    print("{} {:d} is {:d} and is greater than 5".format(str1, number, lastdig))
+    print("{} {:d} is {:d} {}".format(str1, number, lastdig, greaterend))
 
 elif lastdig == 0:
     print("{} {:d} is {:d} and is 0".format(str1, number, lastdig))
 
 else:
-    print("{} {:d} is {:d} and {}".format(str1, number, lastdig, lessend))
+    print("{} {:d} is {:d} {}".format(str1, number, lastdig, lessend))
