@@ -6,4 +6,5 @@ def multiple_returns(sentence):
     else:
         length = len(sentence)
         firstCHAR = sentence[:1]
-    return (length, firstCHAR)
+        newTUPLE = (length, firstCHAR)
+    return (newTUPLE)
