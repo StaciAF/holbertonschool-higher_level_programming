@@ -6,5 +6,5 @@ def max_integer(my_list=[]):
             if newMAX < i:
                 newMAX = i
         return (newMAX)
-    else:
+    elif len(my_list) == 0:
         return (None)
