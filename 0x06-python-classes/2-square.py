@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" this is a module """
+
+
 class Square:
     """ Defines a Square class """
 
@@ -6,6 +9,9 @@ class Square:
         """ initialize Square with private size and optional value of 0
         Args:
             size: size of Square
+        Raises:
+            TypeError: if size is not an intger
+            ValueError: if size is less than 0
 """
         if isinstance(size, int):
             pass
