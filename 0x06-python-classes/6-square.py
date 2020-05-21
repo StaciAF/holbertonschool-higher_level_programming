@@ -4,11 +4,12 @@
 
 class Square:
     """ Defines a Square class with private attribute size """
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """ initializes class with size attribute
         Args: size: size of Square (int)
         """
         self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -33,7 +34,9 @@ class Square:
 
     @property
     def position(self):
-        """ sets the position property for Square """
+        """ sets the position property for Square as private
+        Returns: private instance of position
+        """
         return self.__position
 
     @position.setter
@@ -62,6 +65,7 @@ class Square:
         i = 0
         if self.size == 0:
             print()
-        else:
-            for i in range(self.__size):
-                print('#' * self.size)
+        for i in range(self.position[1]):
+            print()
+        for i in range(self.size):
+            print("{}{}".format(" " * self.position[0], "#" * self.size))
