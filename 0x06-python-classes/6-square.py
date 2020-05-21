@@ -6,7 +6,9 @@ class Square:
     """ Defines a Square class with private attribute size """
     def __init__(self, size=0, position=(0, 0)):
         """ initializes class with size attribute
-        Args: size: size of Square (int)
+        Args:
+        size: size of Square (int)
+        position: position of Square
         """
         self.size = size
         self.position = position
@@ -42,7 +44,7 @@ class Square:
     @position.setter
     def position(self, value):
         """ sets the position of Square """
-        tup_error = "position must be a tuple of 2 positive integers"
+        tup_error = 'position must be a tuple of 2 positive integers'
         if type(value) is tuple and len(value) == 2:
             if isinstance(value[0], int) and isinstance(value[1], int):
                 if (value[0] >= 0 and value[1] >= 0):
@@ -61,7 +63,7 @@ class Square:
         return self.size ** 2
 
     def my_print(self):
-        """ defines public print method to output a sqaure """
+        """ defines public print method to output a sqaure at position """
         i = 0
         if self.size == 0:
             print()
