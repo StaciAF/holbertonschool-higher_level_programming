@@ -1,7 +1,73 @@
-""" This is the 2-matrix_divided module
+# This is the 2-matrix_divided module
 
-The module divides all integers in matrix by an integer with function, matrix_divided(matrix, div).
+# The module divides all integers in matrix by an integer with function, matrix_divided(matrix, div).
 
+# >>> matrix_divided(matrix, 5)
+# [[5, 7, 10, 12]]
+
+def matrix_divided(matrix, div):
+    """ Returns a new matrix with dividend results rounded to 2 decimal places.
+
+    Matrix must be a list of lists of types integer or types float
+    Matrix rows must be of the same size
+    Div must be of type integer or type float, can not be == 0
+    """
+
+# To Begin DocTesting
+# import module
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+# BEGIN TESTS HERE
+# test 1 - divide matrix by integer, results rouned to 2 decimal places
+
+>>> matrix = [[25, 35], [50, 60]]
 >>> matrix_divided(matrix, 5)
-[5, 7, 10, 12]
-"""
+[[5.0, 7.0], [10.0, 12.0]]
+
+# test 2 - divide matrix by integer, results rounded to 2 decimal places
+
+>>> matrix_divided(matrix, 3)
+[[8.33, 11.67], [16.67, 20.0]]
+
+# test 3 - divide matrix by float, results rounded to 2 decimal places
+
+>>> matrix_divided(matrix, 4.5)
+[[5.56, 7.78], [11.11, 13.33]]
+
+# test 4 - matrix given is not list of lists
+>>> matrix = [(42, 67), (2, 6)]
+
+>>> matrix_divided(matrix, 6)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# test 5 - matrix list given has type other than type integer or type float
+>>> matrix = [[1.0, 2, "three"], [5, 6, 90]]
+
+>>> matrix_divided(matrix, 2.2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# test 6 - matrix given does not have rows of the same size
+>>> matrix = [[1, 2, 3], [5, 90]]
+
+>>> matrix_divided(matrix, 9)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+# test 7 - div type given must be of type integer or type float
+
+>>> matrix_divided(matrix, 4j)
+Traceback (most recent call last):
+TypeError: div must be a number
+
+# test 8 - div given must be of type integer or type float, cannot == 0
+
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+if __name__=="__main__":
+   import doctest
+   doctest.testmod()

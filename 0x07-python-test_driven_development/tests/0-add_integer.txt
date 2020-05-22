@@ -1,20 +1,21 @@
-""" This is the 0-add_integer module
-The add module adds two integers with function, add_integer(a, b).
+# This is the 0-add_integer module
+# The add module adds two integers with function, add_integer(a, b).
 
->>> add_integer(12, 8)
-20
-"""
+# >>> add_integer(12, 8)
+# 20
 
 def add_integer(a, b):
     """ Return the integer sum of a '+' b which both must be integers or floats.
 
 If a or b are floats, they must first be cast to integers for summation.
-
+"""
 
 # To Begin DocTesting
-# import module
+# import module and run to confirm
 
 >>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(2, 9)
+11
 
 # BEGIN TESTS HERE
 # test 1 - sum two positive integers
@@ -60,30 +61,39 @@ If a or b are floats, they must first be cast to integers for summation.
 # test 9 - sum with second argument as anything but integer or float
 
 >>> add_integer(15, Nothing)
-TypeError: b must be an integer
+Traceback (most recent call last):
+NameError: name 'Nothing' is not defined
 
 # test 10 - too many arguments passed to function
 
 >>> add_integer(2, 3, 4)
+Traceback (most recent call last):
 TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
 # test 11 - sum with first argument as anything but integer or float
 
 >>> add_integer("three", 15)
+Traceback (most recent call last):
 TypeError: a must be an integer
 
 # test 12 - zero arguments passed
 
 >>> add_integer()
-TypeError: add_integer() takes from 1 to 2 positional arguments but 0 were given
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
 
 # test 13 - sum with integer ending in letter
 
 >>> add_integer(7j, 154)
+Traceback (most recent call last):
 TypeError: a must be an integer
 
 # test 14 - sum with value larger than integer or float
 
 >>> add_integer('inf')
-ValueError:
-"""
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+if __name__ == "__main__":
+   import doctest
+   doctest.testmod()
