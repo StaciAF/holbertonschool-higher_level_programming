@@ -1,0 +1,10 @@
+"""  This is the 4-print_square module
+
+The module prints a square with character # with function, print_square(size).
+
+>>> print_square(3)
+###
+###
+###
+
+"""

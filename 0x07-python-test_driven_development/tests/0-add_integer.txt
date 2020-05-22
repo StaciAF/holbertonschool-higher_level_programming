@@ -1,0 +1,89 @@
+""" This is the 0-add_integer module
+The add module adds two integers with function, add_integer(a, b).
+
+>>> add_integer(12, 8)
+20
+"""
+
+def add_integer(a, b):
+    """ Return the integer sum of a '+' b which both must be integers or floats.
+
+If a or b are floats, they must first be cast to integers for summation.
+
+
+# To Begin DocTesting
+# import module
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+# BEGIN TESTS HERE
+# test 1 - sum two positive integers
+
+>>> add_integer(44, 2)
+46
+
+# test 2 - sum one positive and one negative integer
+
+>>> add_integer(44, -2)
+42
+
+# test 3 - sum two floats
+
+>>> add_integer(5.6, 8.1)
+13
+
+# test 4 - sum one integer and one float
+
+>>> add_integer(12, 13.9)
+25
+
+# test 5 - sum one float and one integer
+
+>>> add_integer(4.8, 6.2)
+10
+
+# test 6 - sum with first argument only as int, b=98 by declaration
+
+>>> add_integer(10)
+108
+
+# test 7 - sum with first argument only as float
+
+>>> add_integer(2.9)
+100
+
+# test 8 - sum with both arguments negative
+
+>>> add_integer(-5, -55.8)
+-60
+
+# test 9 - sum with second argument as anything but integer or float
+
+>>> add_integer(15, Nothing)
+TypeError: b must be an integer
+
+# test 10 - too many arguments passed to function
+
+>>> add_integer(2, 3, 4)
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+# test 11 - sum with first argument as anything but integer or float
+
+>>> add_integer("three", 15)
+TypeError: a must be an integer
+
+# test 12 - zero arguments passed
+
+>>> add_integer()
+TypeError: add_integer() takes from 1 to 2 positional arguments but 0 were given
+
+# test 13 - sum with integer ending in letter
+
+>>> add_integer(7j, 154)
+TypeError: a must be an integer
+
+# test 14 - sum with value larger than integer or float
+
+>>> add_integer('inf')
+ValueError:
+"""

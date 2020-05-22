@@ -1,0 +1,7 @@
+""" This is the 2-matrix_divided module
+
+The module divides all integers in matrix by an integer with function, matrix_divided(matrix, div).
+
+>>> matrix_divided(matrix, 5)
+[5, 7, 10, 12]
+"""

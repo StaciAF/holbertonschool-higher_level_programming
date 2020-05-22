@@ -1,0 +1,12 @@
+""" This is the 5-text_indentation module
+
+The modules prints a text with two new lines after each of these characters: . ? : with function text_indentation(text).
+
+>>> text_indentation("Hello World: Our first program. Wasn't that fun?")
+Hello World:
+
+Our first program.
+
+Wasn't that fun?
+
+"""

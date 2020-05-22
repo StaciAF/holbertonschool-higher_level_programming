@@ -1,0 +1,7 @@
+""" This is the 3-say_my_name module
+
+The module prints 'My name is <first name> <last name>' with function, say_my_name(first_name, last_name).
+
+>>> say_my_name("Stacia", "Apistole")
+My name is Stacia Apistole
+"""
