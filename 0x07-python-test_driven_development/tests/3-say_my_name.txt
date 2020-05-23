@@ -1,16 +1,15 @@
-""" This is the 3-say_my_name module
+# This is the 3-say_my_name module
+# The module prints 'My name is <first name> <last name>' with function, say_my_name(first_name, last_name).
 
-The module prints 'My name is <first name> <last name>' with function, say_my_name(first_name, last_name).
+# >>> say_my_name("Stacia", "Apistole")
+# My name is Stacia Apistole
 
->>> say_my_name("Stacia", "Apistole")
-My name is Stacia Apistole
-"""
 
 def say_my_name(first_name, last_name=""):
-    """ Prints 'My name is <first name> <last name>'
-
+    """
+    Prints 'My name is <first name> <last name>'
     Both first_name and last_name must be strings.
-
+    """
 
 # To Begin DocTesting
 # import module
@@ -26,35 +25,45 @@ My name is Mike Trout
 # test 2 - prints with valid first_name and no last_name, set to "" at declaration
 
 >>> say_my_name("Serena")
-My name is Serena
+My name is Serena 
 
 # test 3 - prints with invalid first_name, is not string
 
 >>> say_my_name(3000, "Tron")
+Traceback (most recent call last):
 TypeError: first_name must be a string
 
 # test 4 - prints with invalid last_name, is not string
 
 >>> say_my_name("Andre", 3000)
+Traceback (most recent call last):
 TypeError: last_name must be a string
 
 # test 5 - prints with None given as first_name
 
 >>> say_my_name(None, "Dupone")
+Traceback (most recent call last):
 TypeError: first_name must be a string
 
 # test 6 - prints with None given as last_name
 
 >>> say_my_name("Dani", None)
+Traceback (most recent call last):
 TypeError: last_name must be a string
 
 # test 7 - prints with invalid first_name type
 
 >>> say_my_name(["Bonnie", "Belle"])
+Traceback (most recent call last):
 TypeError: first_name must be a string
 
 # test 8 - prints with invalid last_name type
 
 >>> say_my_name("Lindie", ("Lou", "Lewis"))
+Traceback (most recent call last):
 TypeError: last_name must be a string
-"""
+
+
+if __name__=="__main__":
+   import doctest
+   doctest.testmod()

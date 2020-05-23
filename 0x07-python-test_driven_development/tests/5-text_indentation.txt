@@ -1,12 +1,36 @@
-""" This is the 5-text_indentation module
+# This is the 5-text_indentation module
+# The modules prints a text with two new lines after each of these characters:
+# . ? : with function text_indentation(text).
 
-The modules prints a text with two new lines after each of these characters: . ? : with function text_indentation(text).
 
->>> text_indentation("Hello World: Our first program. Wasn't that fun?")
-Hello World:
+# >>> text = ("Hello World: Our first program. Wasn't that fun?")
+# Hello World:
 
-Our first program.
+# Our first program.
 
-Wasn't that fun?
+# Wasn't that fun?
 
-"""
+def text_indentation(text):
+    """ Prints text with 2 newlines added with each character . ? and :
+    Text must be of type string
+    """
+
+# To Begin DocTesting
+# import module and run to confirm
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text = ("Hello World: Our first program. Wasn't that fun?")
+
+# test 1 - text given is of string type, will print string with formatting
+
+>>> text_indentation(".hello")
+.
+<BLANKLINE>
+hello
+
+# test 2 - text given is not of string type
+
+>>> text = ["Hello World:", "Our first program.", "Wasn't that fun?"]
+>>> text_indentation(text)
+Traceback (most recent call last):
+TypeError: text must be a string
