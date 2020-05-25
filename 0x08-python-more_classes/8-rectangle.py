@@ -92,7 +92,7 @@ class Rectangle:
 
     def __repr__(self):
         """ this method returns a printable version of Rectangle """
-        return "Rectangle({:d},{:d})".format(self.width, self.height)
+        return "Rectangle({:d}, {:d})".format(self.width, self.height)
 
     def __del__(self):
         """ this method prints at deletion """
