@@ -1,0 +1,67 @@
+# This is the 1-my_list module
+# The print_sorted module prints integer list in ascending value order
+
+def print_sorted(self):
+    """ prints list ascend sorted, list items must be integers """
+
+# To Being DocTesting
+# import module and run to confirm
+
+>>> MyList = __import__('1-my_list').MyList
+>>> this_list = MyList()
+>>> print(this_list)
+[]
+
+# BEGIN TESTS HERE
+# test 1 - creates list with integers
+
+>>> this_list = MyList([4, 7, 9, 22])
+>>> print(this_list)
+[4, 7, 9, 22]
+
+# test 2 - adds integers with two lists as arguments
+
+>>> this_list = MyList([1], [4, 8, 9])
+Traceback (most recent call last):
+TypeError: list() takes at most 1 argument (2 given)
+
+# test 3 - creates a instance of MyList with empty list
+
+>>> this_list = MyList()
+>>> print(this_list)
+[]
+
+# test 4 - uses append method from MyList class
+
+>>> this_list.append(5)
+>>> this_list.append(7)
+>>> this_list.append(9)
+>>> this_list.append(11)
+>>> print(this_list)
+[5, 7, 9, 11]
+
+# test 5 - removes element from list using remove method from MyList class
+>>> this_list.remove(9)
+>>> print(this_list)
+[5, 7, 11]
+
+# test 6 - updates value by index, out of range
+
+>>> this_list[3] = 99
+Traceback (most recent call last):
+IndexError: list assignment index out of range
+
+# test 7 - updates value by index, in range
+>>> this_list[1] = 99
+>>> print(this_list)
+[5, 99, 11]
+
+# test 8 - prints list using print_sorted method
+
+>>> this_list.print_sorted()
+[5, 11, 99]
+
+
+if __name__ =="__main__":
+   import doctest
+   doctest.testmod()
