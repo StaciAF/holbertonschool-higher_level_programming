@@ -2,7 +2,6 @@
 """
 this module adds a method to return __dict__ description
 """
-import json
 
 
 def class_to_json(obj):
