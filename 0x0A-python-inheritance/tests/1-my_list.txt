@@ -67,6 +67,11 @@ IndexError: list assignment index out of range
 >>> print(this_list)
 [-2, -4, -5, 6]
 
+
+>>> this_list = MyList(None)
+Traceback (most recent call last):
+TypeError: 'NoneType' object is not iterable
+
 if __name__ =="__main__":
    import doctest
    doctest.testmod()
