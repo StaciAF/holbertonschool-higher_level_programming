@@ -15,8 +15,11 @@ class Student:
 
     def to_json(self, attrs=None):
         """ this method retrieves dict represenation of Student """
-        if attrs is None:
+        new_dict = {}
+        if type(attrs) == list:
+                for value in attrs:
+                    if value in list(self.__dict__.keys()):
+                        new_dict[value] = self.__dict__[value]
+                return new_dict
+        else:
             return self.__dict__
-        for items in attrs:
-            if items:
-                return self.__dict__.items()
