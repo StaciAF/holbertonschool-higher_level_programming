@@ -57,6 +57,16 @@ class TestRectangle(unittest.TestCase):
     def test_area(self):
         result6 = Rectangle(5, 9, 0, 2, 99)
         self.assertEqual(45, result6.area())
+        result7 = Rectangle(2, 100)
+        self.assertEqual(200, result7.area())
+
+    def test_display(self):
+        pass
+
+    def test_str_rep(self):
+        result8 = Rectangle(2, 100, id=99)
+        self.assertEqual(Rectangle.__str__(result8),
+                         '[Rectangle] (99) 0/0 - 2/100')
 
 #    def test_pep8_style(self):
 #        """ test files for pep8 style """
