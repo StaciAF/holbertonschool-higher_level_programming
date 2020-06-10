@@ -9,7 +9,7 @@ import os
 import unittest
 from models.base import Base
 import json
-# import pep8
+import pep8
 
 
 class TestBase(unittest.TestCase):
@@ -20,12 +20,12 @@ class TestBase(unittest.TestCase):
     def tearDown(self):
         pass
 
-#    def test_pep8_style(self):
-#       """ test files for pep8 style """
-#        pep8style = pep8.StyleGuide(quiet=True)
-#        result = pep8style.check.files(['models/base.py'])
-#        self.assertEqual(result.total_errors, 0,
-#                         "Found code style errors (and warnings).")
+    def test_pep8_style(self):
+        """ test files for pep8 style """
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['models/base.py'])
+        self.assertEqual(result.total_errors, 0,
+                         "Found code style errors (and warnings).")
 
     def test_Base_id_None(self):
         result = Base(None)
@@ -52,5 +52,5 @@ class TestBase(unittest.TestCase):
         result = Base()
         self.assertEqual(result.id, Base._Base__nb_objects)
 
-if __name__ == '__main__':
-    unittest.main()
+    if __name__ == '__main__':
+        unittest.main()

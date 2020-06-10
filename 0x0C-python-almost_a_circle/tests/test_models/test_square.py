@@ -8,7 +8,7 @@ import os
 import io
 import unittest
 import json
-# import pep8
+import pep8
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
@@ -21,6 +21,13 @@ class TestSquare(unittest.TestCase):
 
     def tearDown(self):
         pass
+
+    def test_pep8_style(self):
+        """ test files for pep8 style """
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['models/square.py'])
+        self.assertEqual(result.total_errors, 0,
+                         "Found code style errors (and warnings).")
 
     def test_inheritance(self):
         self.assertIsInstance(Square(4), Base)
@@ -70,13 +77,5 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(Square.__str__(result8),
                          '[Square] (99) 100/0 - 2')
 
-#    def test_pep8_style(self):
-#        """ test files for pep8 style """
-#        pep8style = pep8.StyleGuide(quiet=True)
-#        result = pep8style.check.files(['square.py'])
-#        self.assertEqual(result.total_errors, 0,
-#                         "Found code style errors (and warnings).")
-
-
-if __name__ == '__main__':
-    unittest.main()
+    if __name__ == '__main__':
+        unittest.main()
