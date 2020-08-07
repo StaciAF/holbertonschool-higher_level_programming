@@ -83,7 +83,7 @@ Write a script that takes in the name of a state as an argument and lists all ci
 
 Write a python file that contains the class definition of a State and an instance Base = declarative_base():
 
-- State class: inherits from Base Tips/inherits from Base Tips/class attribute id that represents a column of an auto-generated, unique integer, can’t be null and is a primary key/class attribute name that represents a column of a string with maximum 128 characters and can’t be null
+- State class: inherits from Base Tips/ inherits from Base Tips/ class attribute id that represents a column of an auto-generated, unique integer, can’t be null and is a primary key/ class attribute name that represents a column of a string with maximum 128 characters and can’t be null
 - You must use the module SQLAlchemy
 - Your script should connect to a MySQL server running on localhost at port 3306
 - WARNING: all classes who inherit from Base must be imported before calling Base.metadata.create_all(engine)
@@ -177,7 +177,7 @@ Write a script that deletes all State objects with a name containing the letter 
 
 Write a Python file similar to model_state.py named model_city.py that contains the class definition of a City.
 
-- City class: inherits from Base (imported from model_state)/links to the MySQL table cities/class attribute id that represents a column of an auto-generated, unique integer, can’t be null and is a primary key/class attribute name that represents a column of a string of 128 characters and can’t be null/class attribute state_id that represents a column of an integer, can’t be null and is a foreign key to states.id
+- City class: inherits from Base (imported from model_state)/links to the MySQL table cities/ class attribute id that represents a column of an auto-generated, unique integer, can’t be null and is a primary key/ class attribute name that represents a column of a string of 128 characters and can’t be null/ class attribute state_id that represents a column of an integer, can’t be null and is a foreign key to states.id
 - You must use the module SQLAlchemy
 
 Next, write a script 14-model_city_fetch_by_state.py that prints all City objects from the database hbtn_0e_14_usa:
@@ -187,4 +187,4 @@ Next, write a script 14-model_city_fetch_by_state.py that prints all City object
 - You must import State and Base from model_state - from model_state import Base, State
 - Your script should connect to a MySQL server running on localhost at port 3306
 - Results must be sorted in ascending order by cities.id
-- Results must be display as they are in the example below (<state name>: (<city id>) <city name>)
+- Results must be display as they are in the example below
