@@ -6,10 +6,10 @@ sorted in asc order by states.id
 """
 
 
-import MySQLdb
-from sys import argv
-
 if __name__ == "__main__":
+    import MySQLdb
+    from sys import argv
+
     db = MySQLdb.connect(host="127.0.0.1",
                          port=3306, user=argv[1],
                          passwd=argv[2],
