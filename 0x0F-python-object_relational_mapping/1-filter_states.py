@@ -15,10 +15,11 @@ if __name__ == "__main__":
                          passwd=argv[2],
                          db=argv[3])
     c_db = db.cursor()
-    sql = "SELECT * FROM `states` WHERE name REGEXP '^[N]'"
+    sql = "SELECT * FROM `states` ORDER by id"
     c_db.execute(sql)
     query_res = c_db.fetchall()
     for row in query_res:
-        print(row)
+        if row[1][0] == 'N':
+            print(row)
     c_db.close()
     db.close()
