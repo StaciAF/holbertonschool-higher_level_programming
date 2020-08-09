@@ -17,9 +17,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     flag = 0
-    for state_name_sql in session.query(State).filter(State.name == argv[4]).all():
+    for state_name_sql in session.query(State).filter(
+            State.name == argv[4]).all():
             print("{}".format(state_name_sql.id))
             flag = 1
-    if flag is 0:
+    if flag == 0:
         print("Not Found")
     session.close()
