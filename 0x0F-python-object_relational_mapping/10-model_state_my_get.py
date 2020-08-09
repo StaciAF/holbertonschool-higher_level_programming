@@ -16,9 +16,10 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for state_name_sql in session.query(State).filter_by(name=argv[4]):
-        print("{}".format(state_name_sql.id))
-        break
-    else:
-            print("Not Found")
+    flag = 0
+    for state_name_sql in session.query(State).filter(State.name == argv[4]).all():
+            print("{}".format(state_name_sql.id))
+            flag = 1
+    if flag is 0:
+        print("Not Found")
     session.close()
