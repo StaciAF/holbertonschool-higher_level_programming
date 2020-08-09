@@ -16,10 +16,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    delete_a_sql = session.query(State).filter(State.name.like('%a%')).first()
-    while (delete_a_sql is not None):
+    for delete_a_sql in session.query(State).filter(
+            State.name.like('%a%')):
         session.delete(delete_a_sql)
-        delete_a_sql = session.query(State).filter(
-            State.name.like('%a%')).first()
     session.commit()
     session.close()
