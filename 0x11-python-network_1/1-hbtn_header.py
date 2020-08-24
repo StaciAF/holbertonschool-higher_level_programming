@@ -8,4 +8,4 @@ from sys import argv
 
 
 with urllib.request.urlopen(argv[1]) as response:
-    print(response.getheader('X-Request-ID'))
+    print(response.getheader(argv[2]))
