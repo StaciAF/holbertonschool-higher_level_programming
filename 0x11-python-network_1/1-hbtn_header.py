@@ -6,6 +6,9 @@ display the body of the response - must use a with statement
 import urllib.request
 from sys import argv
 
-
-with urllib.request.urlopen(argv[1]) as response:
-    print(response.getheader(argv[2]))
+if __name__ == '__main__':
+    if argv[1]:
+        url = argv[1]
+        with urllib.request.urlopen(url) as response:
+            head_req = 'X-Request-Id'
+            print(response.getheader(head_req))
