@@ -10,11 +10,12 @@ if __name__ == '__main__':
         payload = {'q': argv[1]}
     else:
         payload = {'q': ""}
-    req = requests.post(url, data=payload)
-    json_resp = req.json()
-    if json_resp.source_code == 204:
-        print("No result")
-    elif json_resp.raise_for_status():
+    try:
+        req = requests.post(url, data=payload)
+        json_resp = req.json()
+        if json_resp == {}:
+            print("No result")
+        else:
+            print("[{}] {}".format(json_resp['id'], json_resp['name']))
+    except ValueError as e:
         print("Not a valid JSON")
-    else:
-        print(req.text)
