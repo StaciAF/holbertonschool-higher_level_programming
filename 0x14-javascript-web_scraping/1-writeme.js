@@ -1,5 +1,4 @@
 #!/usr/bin/node
-#!/usr/bin/node
 const process = require('process');
 const fileName = process.argv[2];
 const data = process.argv[3];
