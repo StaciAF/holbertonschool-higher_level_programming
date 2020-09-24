@@ -58,7 +58,7 @@ Write a script that gets the contents of a webpage and stores it in a file.
 - The file must be UTF-8 encoded
 - You must use the module request
 
-6. How many completed? mandatory
+#### 6. How many completed? mandatory
 Write a script that computes the number of tasks completed by user id.
 
 - The first argument is the API URL: https://jsonplaceholder.typicode.com/todos
